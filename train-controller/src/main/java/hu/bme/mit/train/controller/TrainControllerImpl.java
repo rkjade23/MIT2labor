@@ -49,6 +49,7 @@ public class TrainControllerImpl implements TrainController {
 
 	public void emergencyBreak(){
 		if (this.distance < 5) this.setSpeedLimit(2);
+
 	}
 
 }
