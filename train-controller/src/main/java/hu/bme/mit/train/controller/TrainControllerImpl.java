@@ -8,6 +8,7 @@ public class TrainControllerImpl implements TrainController {
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
 	private int distance = 0;
+	private int value = 2;
 
 	@Override
 	public void followSpeed() {
@@ -47,6 +48,12 @@ public class TrainControllerImpl implements TrainController {
 		this.step = joystickPosition;		
 	}
 
+@Override
+	public int getValue(){
+		return this.value;
+	}
+
+@Override
 	public void emergencyBreak(){
 		if (this.distance < 5) this.setSpeedLimit(2);
 		value = 10;
