@@ -14,7 +14,7 @@ public class TrainControllerImpl extends TimerTask implements TrainController {
 
 	public TrainControllerImpl(){ 
 	Timer timer = new Timer();
-	timer.schedule(this, 1000); 
+	timer.schedule(this, 3000); 
 
 	}	
 
