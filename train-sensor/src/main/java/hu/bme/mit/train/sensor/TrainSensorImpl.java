@@ -12,8 +12,8 @@ import java.time.LocalTime;
 public class TrainSensorImpl implements TrainSensor {
 
 	private TrainController controller;
-	private TrainUser user;
 	private int speedLimit = 5;
+	private TrainUser user;
 	public Table<LocalTime, Integer, Integer> tachograph;
 
 	public TrainSensorImpl(TrainController controller, TrainUser user) {
@@ -28,8 +28,13 @@ public class TrainSensorImpl implements TrainSensor {
 
 	@Override
 	public void overrideSpeedLimit(int speedLimit) {
+		
 		this.speedLimit = speedLimit;
 		controller.setSpeedLimit(speedLimit);
+		if (this.speedLimit < 0 || this.speedLimit > 500){
+			user.setAlarmState(true);
+		}
+		
 	}
 
     @Override
@@ -42,5 +47,7 @@ public class TrainSensorImpl implements TrainSensor {
 	public Table<LocalTime, Integer, Integer> getTacho(){
 		return tachograph;
 	}
+
+	
 
 }
