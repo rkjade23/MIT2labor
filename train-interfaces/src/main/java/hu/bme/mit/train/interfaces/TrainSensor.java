@@ -14,4 +14,7 @@ public interface TrainSensor {
     Table<LocalTime, Integer, Integer> getTacho();
 
 	void refreshTacho();
+
+	
+	
 }
