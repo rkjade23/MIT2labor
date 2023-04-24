@@ -5,7 +5,7 @@ import hu.bme.mit.train.interfaces.TrainController;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class TrainControllerImpl implements TrainController {
+public class TrainControllerImpl extends TimerTask implements TrainController {
 
 	private int step = 0;
 	private int referenceSpeed = 0;
