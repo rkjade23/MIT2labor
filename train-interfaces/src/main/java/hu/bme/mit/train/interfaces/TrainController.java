@@ -13,4 +13,5 @@ public interface TrainController {
 	int getValue();
 
 	void emergencyBreak();
+
 }

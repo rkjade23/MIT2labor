@@ -7,6 +7,9 @@ import hu.bme.mit.train.interfaces.TrainUser;
 import com.google.common.collect.Table;
 import com.google.common.collect.HashBasedTable;
 
+import java.util.Timer; 
+import java.util.TimerTask; 
+
 import java.time.LocalTime;
 
 public class TrainSensorImpl implements TrainSensor {
