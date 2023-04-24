@@ -10,6 +10,18 @@ public class TrainControllerImpl implements TrainController {
 	private int distance = 0;
 	private int value = 2;
 
+
+	Timer timer;
+
+	public TrainControllerImpl(){
+		timer = new Timer();
+		timer.schedule(this, 2000);
+	}
+
+	public void run(){
+		followSpeed();
+	}
+	
 	@Override
 	public void followSpeed() {
 		if (referenceSpeed < 0) {
@@ -58,5 +70,7 @@ public class TrainControllerImpl implements TrainController {
 		if (this.distance < 5) this.setSpeedLimit(2);
 		value = 10;
 	}
+
+	
 
 }
