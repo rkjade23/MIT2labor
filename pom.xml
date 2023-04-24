@@ -7,6 +7,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<sonar.organization>rkjade23</sonar.organization>
+  				<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 
     <packaging>pom</packaging>
@@ -60,8 +62,4 @@
 			</plugin>
 		</plugins>
 	</build>
-	<properties>
-  				<sonar.organization>rkjade23</sonar.organization>
-  				<sonar.host.url>https://sonarcloud.io</sonar.host.url>
-				</properties>
 </project>
