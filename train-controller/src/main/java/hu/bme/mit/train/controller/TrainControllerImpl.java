@@ -1,8 +1,10 @@
 package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
+import java.util.Timer; 
+import java.util.TimerTask; 
 
-public class TrainControllerImpl implements TrainController {
+public class TrainControllerImpl extends TimerTask implements TrainController {
 
 	private int step = 0;
 	private int referenceSpeed = 0;
@@ -10,18 +12,23 @@ public class TrainControllerImpl implements TrainController {
 	private int distance = 0;
 	private int value = 2;
 
+	public TrainControllerImpl(){ 
 	Timer timer = new Timer();
-	 timer.schedule(new TimerTask(){
-		@Override
+	timer.schedule(this, 1000); 
+
+	}	
+
 		public void run(){
 			followSpeed(); 
 		}  
-	 }, 1000);  
+
+
+		
+	  
 
 	@Override
 	public void followSpeed() {
-		if (r
-		eferenceSpeed < 0) {
+		if (referenceSpeed < 0) {
 			referenceSpeed = 0;
 		} else {
 		    if(referenceSpeed+step > 0) {
