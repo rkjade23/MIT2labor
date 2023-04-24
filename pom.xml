@@ -56,6 +56,11 @@
 				<configuration>
 					<release>11</release>
 				</configuration>
+				
+				<properties>
+  				<sonar.organization>rkjade23</sonar.organization>
+  				<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+				</properties>
 			</plugin>
 		</plugins>
 	</build>
